@@ -1,10 +1,22 @@
-const BoardComp = () => {
+import React from "react";
+import { FC } from "react";
+import { Board } from "../models/Board";
+import CellComp from "./CellComp";
+
+interface BoardProps {
+    board: Board;
+    setBoard: (board: Board) => void;
+}
+
+const BoardComp: FC<BoardProps> = ({board, setBoard}) => {
     return (
         <div className="board">
-            <div className="cell white"></div>
-            <div className="cell black"></div>
-            <div className="cell white"></div>
-            <div className="cell black"></div>
+            {board.cells.map ((row, index: number) => 
+            <React.Fragment key={index}>
+                {row.map(cell => 
+                    <CellComp cell={cell} key={cell.id}/>)}
+            </React.Fragment>
+            )}
         </div>
     );
 };
