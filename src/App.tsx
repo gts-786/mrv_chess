@@ -1,7 +1,10 @@
+import "./App.css"
+import BoardComp from "./components/BoardComp";
+
 function App() {
   return (
-    <div>
-      Start
+    <div className="app">
+      <BoardComp/>
     </div>
   );
 }
