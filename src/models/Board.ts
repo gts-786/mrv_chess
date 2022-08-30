@@ -45,12 +45,12 @@ public getCell(x: number, y: number) {
 }
 
 private addKings() {
-    new King(Colors.BLACK, this.getCell(3, 0))
+    new King(Colors.BLACK, this.getCell(4, 0))
     new King(Colors.WHITE, this.getCell(4, 7))
 }
 
 private addQueens() {
-    new Queen(Colors.BLACK, this.getCell(4, 0))
+    new Queen(Colors.BLACK, this.getCell(3, 0))
     new Queen(Colors.WHITE, this.getCell(3, 7))
 }
 
