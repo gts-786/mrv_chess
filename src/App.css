@@ -39,3 +39,14 @@
 .white {
   background-color: coral;
 }
+
+.selected {
+  background-color: purple;
+}
+
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: lime;
+}
