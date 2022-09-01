@@ -1,4 +1,5 @@
 import LostFigures from "components/LostFigures";
+import Timer from "components/Timer";
 import { Colors } from "models/Colors";
 import { Player } from "models/Player";
 import { useEffect, useState } from "react";
@@ -30,6 +31,10 @@ function App() {
 
   return (
     <div className="app">
+      <Timer
+      restart={restart}
+      currentPlayer={currentPlayer}
+      />
       <BoardComp
         board={board}
         setBoard={setBoard}
